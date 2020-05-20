@@ -58,7 +58,7 @@ const OrderCreateDialog = enhancer(
 
     onSubmit = async data => {
       console.log(data);
-      // await this.props.orderCreate({ variables: { data } });
+      await this.props.orderCreate({ variables: { data } });
 
       this.context.closeModal('ORDER_CREATE_DIALOG_ID');
     };
@@ -68,8 +68,7 @@ const OrderCreateDialog = enhancer(
     };
 
     renderFormContent = ({ handleSubmit, invalid, submitting, pristine }) => (
-      // <form onSubmit={handleSubmit}>
-      <form onSubmit={event => event.preventDefault()}>
+      <form onSubmit={handleSubmit}>
         <Dialog.Header title="New Order" onClose={this.onClose} />
         <Dialog.Body scrollable>
           <Grid.Layout gap="md" stretch>

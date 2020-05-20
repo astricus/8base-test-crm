@@ -158,7 +158,7 @@ const ClientOrdersTable = enhancer(
       const totalPrice = this.renderNumber(
         rowData.orderItems.items.reduce((accumulator, item) => item.product.price * item.quantity + accumulator, 0)
       );
-      return totalPrice;
+      return `$${totalPrice}`;
     };
 
     renderScalar = (column, rowData) => {

@@ -210,6 +210,7 @@ const ProductsTable = enhancer(
     };
 
     renderScalar = (column, rowData) => {
+      if (column.name === 'price') return this.renderItems(column, rowData, item => `$${item}`);
       return this.renderItems(column, rowData, item => item);
     };
 

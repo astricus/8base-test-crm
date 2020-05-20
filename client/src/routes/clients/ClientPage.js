@@ -37,7 +37,7 @@ export const ClientPage = withRouter(({ match }) => {
             return (
               <>
                 <Card.Header>
-                  <Heading type="h4" text={`${data.client.firstName} ${data.client.lastName}`} />
+                  <Heading type="h4" text={`${data.client.firstName} ${data.client.lastName}. Client's orders.`} />
                 </Card.Header>
 
                 <Card.Body padding="none" stretch scrollable>
